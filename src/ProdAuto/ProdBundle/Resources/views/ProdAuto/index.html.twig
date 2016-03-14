@@ -1,0 +1,73 @@
+{% extends 'base_for_prodauto.html.twig' %}
+
+{% block body %}
+
+
+
+
+<div class="blog-post">
+
+    <p class="blog-post-meta">
+        {% if app.user %}
+    <a class="button-main button-main__plus button-main__create" href="{{ path('prod_auto_prod_auto_new') }}">Создать заявку</a>
+        {% endif %}
+
+    <h1 class="heading-1 heading-1__tickets">Заявки</h1>
+
+    <div data-region="active-tickets">
+        <table class="ticket-all"><thead>
+            <tr class="ticket-all_row">
+                <th class="ticket-all_head ticket-all_head__id">
+                    <span class="ticket-all_head-link js-sortable-col" data-sortable-type="int">ID</span>
+                </th>
+                <th class="ticket-all_head ticket-all_head__title">
+                    <span class="ticket-all_head-link js-sortable-col js-sorted ticket-all_head-link__sort-asc">Тема</span>
+                </th>
+                <th class="ticket-all_head ticket-all_head__category">
+                    <span class="ticket-all_head-link js-sortable-col">Подкатегория</span>
+                </th>
+
+                <th class="ticket-all_head ticket-all_head__status" colspan="2">
+                    <span class="ticket-all_head-link js-sortable-col">Статус</span>
+                </th>
+            </tr>
+            </thead>
+            <tbody class="ticket-all_body js-list">
+            {% for spare_part in spare_parts %}
+            <tr class="ticket-all_row ticket-all_row__in-queue">
+                <td class="ticket-all_cell js-cell">
+                    <span class="ticket-all_cell-txt ticket-all_cell-txt__id">{{ spare_part.id }}</span>
+                </td>
+                <td class="ticket-all_cell js-cell">
+
+                    <a class="ticket-all_cell-link" href="{{ path('prod_auto_prod_show', { 'id': spare_part.id }) }}">
+                        {{ spare_part.title }}
+                    </a>
+
+                </td>
+                <td class="ticket-all_cell js-cell">
+                    <span class="ticket-all_cell-txt ticket-all_cell-txt__category">Обжалование наказаний</span>
+                </td>
+
+                <td class="ticket-all_cell js-cell">
+    <span class="ticket-all_cell-txt ticket-all_cell-txt__status">
+        <span class="ticket-status ticket-status__in-queue">{{ spare_part.status }}</span>
+    </span>
+                </td>
+
+                <td class="ticket-all_cell js-cell">
+                    {% if app.user %}
+                    <a href="{{ path('prod_auto_prod_delete', { 'id': spare_part.id }) }}" class="link-cancel js-cancel" title="Отменить"></a>
+                    {% endif %}
+                </td>
+
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+{% endblock %}

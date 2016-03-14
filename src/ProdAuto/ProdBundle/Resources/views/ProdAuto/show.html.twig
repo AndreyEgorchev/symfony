@@ -1,0 +1,152 @@
+{% extends 'base_for_prodauto.html.twig' %}
+
+{% block body %}
+
+    <div><div class="page page__clean">
+            <div class="ticket-view">
+                <div class="ticket-view_details">
+                    <div data-region="ticket.details"><div class="js-ticket-details"><div class="ticket-view_request">
+                                <h1 class="heading-1">Заявка №{{ spare_part.id }}</h1>
+                                <dl class="list-determination">
+                                    <dt class="list-determination_term">Дата створення</dt>
+                                    <dd class="list-determination_definition">{% if spare_part.created %}{{ spare_part.created|date('Y-m-d H:i:s') }}{% endif %}</dd>
+                                    <dt class="list-determination_term">Ціна</dt>
+                                    <dd class="list-determination_definition">від {{spare_part.priceVid}} до {{  spare_part.priceDo}} {{ spare_part.currency }}</dd>
+                                    <dt class="list-determination_term">Тема</dt>
+                                    <dd class="list-determination_definition">{{ spare_part.title }}</dd>
+                                    <dt class="list-determination_term">Виробник</dt>
+                                    <dd class="list-determination_definition">{{ spare_part.producer }}</dd>
+                                    <dt class="list-determination_term">Серійний номер</dt>
+                                    <dd class="list-determination_definition">{{ spare_part.serialNumber }}</dd>
+                                </dl>
+                            </div></div></div>
+                    <div data-region="ticket.posts.first"><div class="js-ticket-post">
+                            <div class="markdown"><div class="notice-important1">
+                                    {{ spare_part.description }}
+                                </div></div>
+
+                            <div data-region="tickets.widget.attachments"><div class="js-attachments"><div data-region="attachments-list"><ul class="list-file js-attachments-list hidden"></ul></div>
+                                    <div data-region="attachments-upload"></div></div></div></div></div>
+                </div>
+                <div class="ticket-view_status" data-region="ticket.status"><div>    <div class="ticket-status-one ticket-status-one__in-queue">
+                            <span class="ticket-status ticket-status__in-queue">{{ spare_part.status }}</span>
+                        </div>
+                        <button class="button-second" data-action="cancel">Отменить</button>
+                    </div></div>
+            </div>
+            <div class="js-posts-divider" data-hidden-class="hidden">
+                <hr class="hr hr__post">
+                <h2 class="heading-2">Ответы</h2>
+            </div>
+
+            {% for item in post %}
+            {% if item.sPId == spare_part.id %}
+            <div data-region="ticket.posts.list">
+                <div class="js-ticket-posts">
+                    <div class="ticket-post js-ticket-post">
+                        <div class="avatar">
+
+                        </div>
+                        <div class="ticket-post_conversation">
+
+                            <span class="ticket-post_user">{{item.username }}</span>
+                            <span class="ticket-post_date">
+                                {% if item.created %}{{ item.created|date('Y-m-d H:i:s') }}{% endif %}
+                            </span>
+                            <div class="ticket-post_message">
+                                <div class="markdown">{{ item.description }}</div>
+                            </div>
+                            <div data-region="tickets.widget.attachments"><div class="js-attachments"><div data-region="attachments-list"><ul class="list-file js-attachments-list hidden"></ul></div>
+                                    <div data-region="attachments-upload"></div></div></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            <div data-region="ticket.posts.form">
+                <div class="ticket-post-form js-ticket-post-form">
+                    {% if app.user %}
+                    <form name="ticket_post" method="post" action="{{ path('prod_auto_prod_add_post',{'id':spare_part.id}) }}" data-hash="fcd098c4a09ab9b353688bd064b5b6c8" class="form-horizontal" novalidate="">
+                        <div class="ticket-problem ticket-problem__view">
+                            <div class="avatar">
+
+                            </div>
+
+
+                            <div class="ticket-problem_message">
+                                <div class="customfield-item js-customfield">
+
+                                    <div class="divider-field__problem js-post-message-container divider-field" data-active-class="divider-field__problem-active">
+                                        <textarea id="ticket_post_content" name="description" required="required" data-maxlength="4500" rows="13" class="js-post-message field field__problem field js-field" ></textarea>
+                                    </div>
+                                    <p class="remark hidden js-remaining-container" data-hidden-class="hidden">Осталось символов: <span class="js-remaining-value"></span>.</p>
+
+
+
+                                </div>
+                                <div data-region="tickets.widget.attachments" data-form-data-name="ticket_post" data-sizes-map="{&quot;2048000&quot;:[&quot;bak&quot;,&quot;bat&quot;,&quot;cfg&quot;,&quot;dll&quot;,&quot;jpeg&quot;,&quot;jpg&quot;,&quot;png&quot;,&quot;wotreplay&quot;,&quot;wowpreplay&quot;,&quot;wowpreport&quot;,&quot;wowsreplay&quot;,&quot;xml&quot;,&quot;zip&quot;],&quot;1024000&quot;:[&quot;wgc&quot;],&quot;819200&quot;:[&quot;dat&quot;,&quot;dmp&quot;,&quot;doc&quot;,&quot;log&quot;,&quot;pdf&quot;,&quot;pp2&quot;,&quot;txt&quot;,&quot;xls&quot;,&quot;xlsx&quot;]}"><div class="js-attachments"><div data-region="attachments-list"><ul class="list-file js-attachments-list hidden"></ul></div>
+                                        <div data-region="attachments-upload"><div class="js-attachments-upload"><ul class="list-file js-files-list"></ul>
+
+                                                <div class="loading-area js-drop-area" data-active-class="loading-area__active">
+                                                    <span class="loading-area_txt">Перетащите файлы сюда</span> <span class="loading-area_ampersand js-hide-on-drag">или</span>
+    <span class="button-second button-second__upload fileinput-button js-hide-on-drag">
+        выберите на компьютере
+        <input class="js-file-input" name="file" multiple="multiple" type="file">
+    </span>
+                                                </div>
+
+                                                <p class="remark">
+                                                    Максимальний розмір файлу: 2MB (bak, bat, cfg, dll, jpeg, jpg, png, wotreplay, wowpreplay, wowpreport, wowsreplay, xml, zip), 1000KB (wgc), 800KB (dat, dmp, doc, log, pdf, pp2, txt, xls, xlsx).
+                                                    Максимальна кількість файлів для завантаження: 5.
+                                                </p>
+
+                                                <div class="js-errors"></div></div></div></div></div>                                <input id="ticket_post_temporary_attachments" name="ticket_post[temporary_attachments]" class="field js-field" value="[]" type="hidden">
+                            </div>
+                            <div class="ticket-problem_prompt">
+                                <div class="markdown">
+                                    <ol>
+                                        <li>Опишите проблему как можно подробнее.</li>
+                                        <li>Дождитесь ответа на свою заявку. Обратите внимание, что заявки рассматриваются в порядке общей очереди, а любое новое сообщение помещает заявку в конец очереди.</li>
+                                        <li>Если у вас возникло несколько проблем, относящихся к разным категориям, не описывайте их в одной заявке. Создайте отдельную заявку для каждой проблемы. Так наши специалисты смогут быстрее разрешить ваши проблемы.</li>
+                                    </ol>
+                                    <div class="notice-important">
+                                        Сообщение и прикреплённые файлы не должны содержать ваши паспортные данные.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customfield-item js-customfield">    <ul class="divider-radio divider-radio__alone">
+                                <li class="divider-radio_item">
+                                    <div class="b-checkbox" tabindex="1"><input class="js-wg_combobox-activated" style="display: none;" id="ticket_post_confidential" name="ticket_post[confidential]" required="required" value="1" type="checkbox"><span class="b-checkbox_checker"></span></div>
+                                    <label for="ticket_post_confidential" class="b-combobox-label" data-error-class="label__error"></label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="divider-button">
+                            <button type="submit" id="ticket_post_submit" name="ticket_post[submit]" class="button-main js-submit divider-field" data-loading-class="button-main__loading" data-disabled-class="button-main__disabled">Добавити</button>
+
+                        </div>
+                        <input id="ticket_post__token" name="ticket_post[_token]" class="field js-field" value="ngMSETydo_2DTwf72hF9nJYFV4yxX88nWi5GlEwqc50" type="hidden">
+                    </form>
+                    {% endif %}
+                    <ul>
+                        <li>
+                            <a href="{{ path('prod_auto_prod_auto_index') }}">Back to the list</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+

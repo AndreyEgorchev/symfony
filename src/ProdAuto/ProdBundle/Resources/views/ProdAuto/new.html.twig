@@ -1,0 +1,70 @@
+{% extends 'base_for_prodauto.html.twig' %}
+
+{% block body %}
+
+
+<div class="col-md-9">
+    {{ form_start(form,{'method': 'post', 'attr': {'class': 'form-horizontal'}}) }}
+
+
+    <div class="form-group">
+
+        {{ form_label(form.title, 'Назва', { 'label_attr': {'class': 'col-sm-2 control-label'} }) }}
+        {{ form_errors(form.title) }}
+        <div class="col-sm-6">
+            {{ form_widget(form.title, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+    </div>
+    <div class="form-group">
+
+        {{ form_label(form.serial_number, "Серійний номер", { 'label_attr': {'class': 'col-sm-2 control-label'} }) }}
+        {{ form_errors(form.serial_number) }}
+        <div class="col-sm-4">
+            {{ form_widget(form.serial_number, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        {{ form_label(form.producer, 'Виробник',{ 'label_attr': {'class': 'col-sm-2 control-label'} }) }}
+        <div class="col-sm-4">
+            {{ form_widget(form.producer, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+    </div>
+
+    <div class="form-group">
+
+    </div>
+    <div class="form-group">
+
+        {{ form_label(form.price_vid, "Від ", { 'label_attr': {'class': 'col-sm-2 control-label'} }) }}
+        {{ form_errors(form.price_vid) }}
+        <div class="col-sm-3">
+            {{ form_widget(form.price_vid, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        {{ form_label(form.price_do, "До", { 'label_attr': {'class': 'col-sm-1 control-label'} }) }}
+        {{ form_errors(form.price_do) }}
+        <div class="col-sm-3">
+            {{ form_widget(form.price_do, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        {{ form_label(form.currency, "Валюта", { 'label_attr': {'class': 'col-sm-1 control-label'} }) }}
+        {{ form_errors(form.currency) }}
+        <div class="col-sm-2">
+            {{ form_widget(form.currency, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+    </div>
+
+    <div class="form-group">
+
+        {{ form_label(form.description, 'Опис',{ 'label_attr': {'class': 'col-sm-2 control-label'} }) }}
+        <div class="col-sm-10">
+            {{ form_widget(form.description, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        <input type="hidden" name="status" value="Активний">
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" value="Добавити" />
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+</div>
+
+{% endblock %}

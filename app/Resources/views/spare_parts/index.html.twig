@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Spare_parts list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Serial_number</th>
+                <th>Description</th>
+                <th>Producer</th>
+                <th>Price</th>
+                <th>Created</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for spare_part in spare_parts %}
+            <tr>
+                <td><a href="{{ path('spare_parts_show', { 'id': spare_part.id }) }}">{{ spare_part.id }}</a></td>
+                <td>{{ spare_part.title }}</td>
+                <td>{{ spare_part.serialnumber }}</td>
+                <td>{{ spare_part.description }}</td>
+                <td>{{ spare_part.producer }}</td>
+                <td>{{ spare_part.price }}</td>
+                <td>{% if spare_part.created %}{{ spare_part.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('spare_parts_show', { 'id': spare_part.id }) }}">show</a>
+                        </li>
+                      {#  <li>
+                            <a href="{{ path('spare_parts_edit', { 'id': spare_part.id }) }}">edit</a>
+                        </li>#}
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('spare_parts_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

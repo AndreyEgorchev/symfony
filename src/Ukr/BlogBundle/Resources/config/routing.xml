@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="ukr_blog_page" path="/ukr/page">
+        <default key="_controller">UkrBlogBundle:Post:index</default>
+    </route>
+    <route id="ukr_blog_show" path="/ukr/show">
+        <default key="_controller">UkrBlogBundle:Post:ukrshow</default>
+    </route>
+    <route id="ukr_blog_new" path="/ukr/new">
+        <default key="_controller">UkrBlogBundle:Post:ukrnew</default>
+    </route>
+    <route id="ukr_blog_edit" path="/ukr/edit">
+        <default key="_controller">UkrBlogBundle:Post:ukredit</default>
+    </route>
+</routes>

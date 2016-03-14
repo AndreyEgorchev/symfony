@@ -1,0 +1,1095 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 99%;
+    vertical-align: baseline;
+}
+
+/* line 22, ../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+    line-height: 1;
+}
+
+/* line 24, ../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+    list-style: none;
+}
+
+/* line 26, ../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* line 28, ../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+/* line 30, ../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+    quotes: none;
+}
+/* line 103, ../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+
+/* line 32, ../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+    border: none;
+}
+
+/* line 116, ../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+/* line 106, ../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+    font-size: 100%;
+    line-height: 1.125em;
+}
+
+@font-face {
+    font-family: 'OpenSansMy';
+    src: url("../fonts/OpenSans/OpenSans.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSans.woff") format("woff"), url("../fonts/OpenSans/OpenSans.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans.svg#OpenSans") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+/* line 12, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+a, div, p, span, h1, h2, h3, h4, h5, h6 {
+    font-family: 'OpenSansMy';
+}
+
+/* line 15, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+html, body {
+    height: 100%;
+}
+
+/* line 18, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+body {
+    position: relative;
+}
+
+/* line 22, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+header h1, header h2, header p, header img, footer h1, footer h2, footer p, footer img, .main h1, .main h2, .main p, .main img {
+    margin-bottom: 18px;
+}
+/* line 25, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+header a, footer a, .main a {
+    text-decoration: none;
+}
+/* line 28, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+header h1, footer h1, .main h1 {
+    font-size: 26px;
+    line-height: 36px;
+    clear: both;
+}
+/* line 32, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+header h2, footer h2, .main h2 {
+    font-size: 22px;
+    line-height: 18px;
+}
+
+/* line 37, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.page {
+    min-height: 100%;
+    margin-bottom: -60px;
+}
+
+/* line 41, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.clear {
+    margin-top: 18px;
+    clear: both;
+    height: 60px;
+}
+
+/* line 47, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.MTblocks form button {
+    cursor: pointer;
+}
+
+/* line 52, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+a.tag {
+    margin-bottom: 9px;
+    background-color: #4CACDB;
+    font-family: 'Open Sans Regular', 'Open Sans';
+    font-size: 12px;
+    line-height: 27px;
+    padding-right: 5px;
+    margin-right: 15px;
+    color: #FFFFFF;
+}
+/* line 60, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+a.tag:hover {
+    background-color: #CCCCCC;
+    color: #1E1E1E;
+}
+/* line 63, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+a.tag:hover:after {
+    border-left: 10px solid #CCCCCC;
+}
+/* line 66, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+a.tag:hover:before {
+    color: #4CACDB;
+}
+/* line 70, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+a.tag:after {
+    margin-left: 5px;
+    position: absolute;
+    content: '';
+    border-top: 14px solid transparent;
+    border-left: 10px solid #4CACDB;
+    border-bottom: 13px solid transparent;
+}
+/* line 78, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+a.tag:before {
+    margin-left: 5px;
+    margin-right: 5px;
+    vertical-align: middle;
+    font: normal normal normal 18px FontAwesome;
+}
+
+/* line 85, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+#main {
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+/* line 12, ../var/lib/gems/1.9.1/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+#main:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+/* line 89, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.MCleft {
+    width: 74.57627%;
+    float: left;
+    margin-right: 1.69492%;
+}
+
+/* line 93, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.MCright {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0;
+    display: inline-block;
+    min-width: 140px;
+}
+/* line 97, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.MCright > div {
+    min-width: 140px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: 17px;
+    background-color: #EFF6F4;
+}
+/* line 98, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.MCright > div h1 {
+    margin-bottom: 18px;
+}
+
+/* line 106, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+span.info {
+    font-size: 14px;
+    margin-right: 20px;
+}
+/* line 108, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+span.info:before {
+    font-size: 20px;
+    line-height: 36px;
+    vertical-align: sub;
+    color: #4CACDB;
+}
+
+/* line 115, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.social-link {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 54px;
+}
+/* line 118, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.social-link a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #4CACDB;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+/* line 127, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.social-link a:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+/* line 133, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.b-popUp {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 144, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.b-popUp .popUp-content {
+    background-color: #F0F0F0;
+    width: 100%;
+    max-width: 450px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: 17px;
+}
+/* line 149, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.b-popUp .popUp-content h1 {
+    font-size: 26px;
+    line-height: 36px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+    padding-bottom: 17px;
+    margin-bottom: 18px;
+}
+/* line 154, ../var/www/src/AppBundle/Resources/public/sass/components/_page.scss */
+.b-popUp .popUp-content .big-black-button {
+    line-height: 40px;
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 0px -18px -18px -18px;
+    margin-top: 18px;
+}
+
+/* line 2, ../var/www/src/AppBundle/Resources/public/sass/components/_header.scss */
+header {
+    height: auto;
+    background-color: #F0F0F0;
+    margin-bottom: 18px;
+}
+/* line 6, ../var/www/src/AppBundle/Resources/public/sass/components/_header.scss */
+header .logo {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+    width: 186px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+/* line 11, ../var/www/src/AppBundle/Resources/public/sass/components/_header.scss */
+header .log-reg {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 72px;
+    min-width: 143px;
+    position: relative;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* line 12, ../var/lib/gems/1.9.1/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+header .log-reg:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+/* line 20, ../var/www/src/AppBundle/Resources/public/sass/components/_header.scss */
+header .log-reg .login-wrap {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+/* line 25, ../var/www/src/AppBundle/Resources/public/sass/components/_header.scss */
+header .log-reg .login-wrap .login {
+    line-height: 30px;
+    font-weight: 400;
+    font-style: normal;
+    color: #1E1E1E;
+    padding-right: 17px;
+    height: 30px;
+    display: inline-block;
+    text-decoration: underline;
+}
+/* line 35, ../var/www/src/AppBundle/Resources/public/sass/components/_header.scss */
+header .log-reg .login-wrap .reg {
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    text-align: center;
+    width: 120px;
+    border-radius: 5px;
+    line-height: 30px;
+    display: inline-block;
+    background-color: #ff6600;
+}
+/* line 46, ../var/www/src/AppBundle/Resources/public/sass/components/_header.scss */
+header .log-reg .login-wrap .reg:hover {
+    opacity: 0.8;
+}
+
+/* line 2, ../var/www/src/AppBundle/Resources/public/sass/components/_footer.scss */
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #F0F0F0;
+    clear: both;
+}
+/* line 7, ../var/www/src/AppBundle/Resources/public/sass/components/_footer.scss */
+footer span {
+    float: left;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+/* line 11, ../var/www/src/AppBundle/Resources/public/sass/components/_footer.scss */
+footer .social-link {
+    float: right;
+    display: inline-block;
+}
+/* line 14, ../var/www/src/AppBundle/Resources/public/sass/components/_footer.scss */
+footer .social-link a {
+    font-size: 18px;
+    line-height: 54px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+}
+/* line 22, ../var/www/src/AppBundle/Resources/public/sass/components/_footer.scss */
+footer .go-top {
+    margin-top: 9px;
+    margin-bottom: 9px;
+    width: 6.77966%;
+    float: right;
+    margin-right: 0;
+    margin-left: 8.47458%;
+    font-size: 19px;
+    color: #CCCCCC;
+    text-decoration: none;
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    line-height: 28px;
+    border: 2px solid #CCCCCC;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* line 1, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.MTleft, .MTcenter {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+
+/* line 6, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.MTright {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+
+/* line 11, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.MTblocks {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: 17px;
+    min-height: 250px;
+    box-shadow: 5px 5px 20px -2px #CCCCCC;
+}
+/* line 15, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.MTblocks h1, .MTblocks p, .MTblocks div, .MTblocks input {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+/* line 20, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.MTblocks form {
+    position: relative;
+}
+/* line 22, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.MTblocks form span {
+    color: #999999;
+    border-left: 1px solid #999999;
+    position: absolute;
+    top: 4px;
+    right: 1px;
+    padding: 8px;
+}
+/* line 30, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.MTblocks form input[type="email"] {
+    color: #999999;
+    padding-left: 4%;
+    font-size: 16px;
+    line-height: 36px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: -1px;
+    margin-bottom: 9px;
+    text-align: left;
+    width: 96%;
+}
+/* line 40, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.MTblocks form button {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 39px;
+    border: none;
+    background-color: #4CACDB;
+    color: #FFFFFF;
+    max-width: 200px;
+    margin: auto;
+}
+/* line 50, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.MTblocks form button:hover {
+    opacity: .8;
+}
+/* line 56, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.MTblocks .social-link {
+    margin-bottom: 0px;
+}
+
+/* line 61, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.more {
+    text-decoration: underline;
+    color: #4CACDB;
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+    padding-bottom: 17px;
+}
+
+/* line 70, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.info {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+/* line 73, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.info:before {
+    margin-right: 5px;
+}
+/* line 76, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.info a {
+    color: #1E1E1E;
+}
+
+/* line 80, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.post-link {
+    color: #1E1E1E;
+}
+/* line 82, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.post-link:hover {
+    color: #4CACDB;
+}
+
+/* line 86, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.pager {
+    text-align: center;
+}
+/* line 88, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.pager > span {
+    margin-right: 20px;
+    color: #999999;
+    font-size: 16px;
+    line-height: 36px;
+}
+
+/* line 94, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.pagerfanta {
+    margin-top: 18px;
+    font-size: 12px;
+    line-height: 36px;
+    display: inline-block;
+}
+/* line 99, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.pagerfanta nav a, .pagerfanta nav span {
+    display: inline-block;
+    font-family: 'Open Sans Bold', 'Open Sans';
+    font-weight: 700;
+    line-height: 30px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #F0F0F0;
+    color: #1E1E1E;
+    margin-right: 4px;
+}
+/* line 111, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.pagerfanta nav a:first-child, .pagerfanta nav a:last-child, .pagerfanta nav span:first-child, .pagerfanta nav span:last-child {
+    width: 75px;
+}
+/* line 115, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.pagerfanta nav .current {
+    background-color: #1E1E1E;
+    color: #F0F0F0;
+}
+
+/* line 122, ../var/www/src/AppBundle/Resources/public/sass/components/_index.scss */
+.error {
+    text-align: center;
+    margin-top: 30%;
+    width: 100%;
+}
+
+/* line 1, ../var/www/src/AppBundle/Resources/public/sass/components/_post.scss */
+.double-border {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+    padding-bottom: 17px;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+}
+/* line 5, ../var/www/src/AppBundle/Resources/public/sass/components/_post.scss */
+.double-border:after {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #4CACDB;
+    padding-bottom: 15px;
+    content: '';
+    width: 6.77966%;
+    float: left;
+    margin-right: 1.69492%;
+    display: block;
+    position: absolute;
+}
+
+/* line 13, ../var/www/src/AppBundle/Resources/public/sass/components/_post.scss */
+.breadcrumb {
+    margin-bottom: 18px;
+}
+/* line 15, ../var/www/src/AppBundle/Resources/public/sass/components/_post.scss */
+.breadcrumb a, .breadcrumb span {
+    font-size: 13px;
+    color: #1E1E1E;
+}
+/* line 19, ../var/www/src/AppBundle/Resources/public/sass/components/_post.scss */
+.breadcrumb span {
+    color: #CCCCCC;
+}
+
+/* line 23, ../var/www/src/AppBundle/Resources/public/sass/components/_post.scss */
+img {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* line 3, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 450px;
+    background-color: #EFF6F4;
+}
+/* line 12, ../var/lib/gems/1.9.1/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+.fos-user-content:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+/* line 10, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper {
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #CCCCCC;
+    padding-left: 17px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #CCCCCC;
+    padding-top: 17px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #CCCCCC;
+    padding-right: 17px;
+}
+/* line 15, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .title {
+    font-size: 26px;
+    line-height: 36px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+    padding-bottom: 17px;
+    margin-bottom: 18px;
+    display: block;
+}
+/* line 24, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form {
+    position: relative;
+}
+/* line 27, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .input {
+    position: relative;
+}
+/* line 30, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .input span {
+    border-left: 1px solid #999999;
+    position: absolute;
+    color: #999999;
+    top: 4px;
+    right: 1px;
+    padding: 8px;
+    width: 45px;
+    height: 16px;
+    text-align: center;
+}
+/* line 42, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .input input {
+    font-size: 16px;
+    line-height: 36px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: -1px;
+    margin-bottom: 9px;
+    color: #999999;
+    padding-left: 4%;
+    text-align: left;
+    width: 96%;
+}
+/* line 54, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .actions {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* line 12, ../var/lib/gems/1.9.1/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+.fos-user-content .wrapper .form form .actions:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+/* line 57, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .actions input[type="submit"] {
+    font-size: 16px;
+    line-height: 39px;
+    border: none;
+    background-color: #4CACDB;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+/* line 65, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .actions input[type="submit"]:hover {
+    opacity: .8;
+}
+/* line 71, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .actions .login input[type="submit"] {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+}
+/* line 75, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .actions .login .remember-me {
+    width: 40.67797%;
+    float: left;
+    margin-right: 1.69492%;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* line 12, ../var/lib/gems/1.9.1/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+.fos-user-content .wrapper .form form .actions .login .remember-me:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+/* line 79, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .actions .login .remember-me input {
+    width: 6.77966%;
+    float: left;
+    margin-right: 1.69492%;
+}
+/* line 83, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .actions .login .remember-me label {
+    font-size: 14px;
+    line-height: 18px;
+    width: 83.05085%;
+    float: right;
+    margin-right: 0;
+}
+/* line 89, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .actions .login .reset-password {
+    font-size: 14px;
+    line-height: 18px;
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+}
+/* line 93, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .actions .login .reset-password a {
+    display: block;
+    color: #CCCCCC;
+}
+/* line 101, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .form form .actions .submit input[type="submit"] {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+/* line 109, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .social {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #CCCCCC;
+    padding-top: 17px;
+    margin-top: 18px;
+}
+/* line 114, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .social .social-title {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 18px;
+    display: block;
+}
+/* line 121, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .wrapper .social .social-link {
+    margin-bottom: 18px;
+}
+/* line 127, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .social-info {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* line 12, ../var/lib/gems/1.9.1/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+.fos-user-content .social-info:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+/* line 130, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .social-info .social-avatar {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+}
+/* line 134, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .social-info .social-title {
+    width: 83.05085%;
+    float: right;
+    margin-right: 0;
+}
+/* line 139, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .bottom-wrapper {
+    height: 40px;
+}
+/* line 142, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .bottom-wrapper a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    background-color: #1E1E1E;
+}
+/* line 150, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .bottom-wrapper a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* line 156, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .register .wrapper,
+.fos-user-content .reset .wrapper,
+.fos-user-content .request .wrapper,
+.fos-user-content .profile-edit .wrapper,
+.fos-user-content .change-password .wrapper,
+.fos-user-content .group-new .wrapper,
+.fos-user-content .group-list .wrapper,
+.fos-user-content .group-edit .wrapper,
+.fos-user-content .group-show .wrapper {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+    padding-bottom: 17px;
+}
+/* line 168, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+.fos-user-content .confirmed,
+.fos-user-content .check-email,
+.fos-user-content .password-already-requested,
+.fos-user-content .profile-show,
+.fos-user-content .connect-success,
+.fos-user-content .registration-success {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: 17px;
+}
+
+/* line 178, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+div#profile-wrap {
+    position: absolute;
+    width: 100%;
+}
+/* line 182, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+div#profile-wrap .title {
+    font-size: 14px;
+    line-height: 36px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: 17px;
+    background-color: #FFFFFF;
+}
+/* line 189, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+div#profile-wrap ul.dropdown-menu {
+    margin-top: 9px;
+    margin-bottom: 9px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: 17px;
+    background-color: #FFFFFF;
+}
+/* line 195, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+div#profile-wrap ul.dropdown-menu li {
+    font-size: 14px;
+    line-height: 18px;
+}
+/* line 198, ../var/www/src/AppBundle/Resources/public/sass/components/_fos_user.scss */
+div#profile-wrap ul.dropdown-menu li a {
+    text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    /* line 2, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    h1 {
+        font-size: 22px;
+        line-height: 18px;
+    }
+
+    /* line 3, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    h2 {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    /* line 4, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    p, span {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    /* line 7, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    #main {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    /* line 11, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .social-link {
+        font-size: 22px;
+        line-height: 36px;
+    }
+    /* line 13, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .social-link a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    /* line 19, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .MTblocks form input[type="email"] {
+        font-size: 14px;
+    }
+}
+@media (max-width: 700px) {
+    /* line 26, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .main h1 {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    /* line 27, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .main h2 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    /* line 29, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .main p, .main span, header p, header span, footer p, footer span {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    /* line 30, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .main h1, .main span, .main img, .main div, header h1, header span, header img, header div, footer h1, footer span, footer img, footer div {
+        margin-bottom: 0px;
+    }
+
+    /* line 32, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    footer .go-top {
+        margin-left: 18px;
+    }
+
+    /* line 35, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    span.info {
+        font-family: 'Open Sans Regular', 'Open Sans';
+        font-size: 10px;
+        line-height: 18px;
+        margin-bottom: 0px;
+        margin-right: 5px;
+    }
+    /* line 40, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    span.info:before {
+        font: normal normal normal 10px FontAwesome;
+        vertical-align: middle;
+    }
+
+    /* line 48, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .social-link {
+        font-size: 18px;
+        line-height: 36px;
+    }
+    /* line 50, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .social-link a {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+    }
+
+    /* line 56, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .MCleft, .MCright {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* line 59, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .MTleft, .MTright, .MTcenter {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* line 62, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .MTblocks {
+        min-height: 0px;
+    }
+
+    /* line 65, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .pager > span {
+        display: block;
+    }
+}
+@media (max-width: 500px) {
+    /* line 70, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .page {
+        margin-bottom: -141px;
+    }
+
+    /* line 73, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    .clear {
+        height: 141px;
+    }
+
+    /* line 76, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    footer {
+        padding-top: 18px;
+        height: 123px;
+    }
+    /* line 79, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    footer span, footer .go-top, footer .social-link {
+        display: block;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+}
+@media (max-width: 420px) {
+    /* line 90, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    header .logo, header .log-reg {
+        display: block;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* line 96, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    header, #headerBG {
+        height: 90px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    /* line 100, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    footer {
+        min-width: 275px;
+    }
+
+    /* line 104, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    nav a {
+        margin-bottom: 0px;
+    }
+    /* line 106, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    nav a:first-child, nav a:last-child {
+        display: block;
+        margin: auto;
+    }
+    /* line 112, ../var/www/src/AppBundle/Resources/public/sass/_responsiv.scss */
+    nav span:first-child, nav span:last-child {
+        display: block;
+        margin: auto;
+    }
+}

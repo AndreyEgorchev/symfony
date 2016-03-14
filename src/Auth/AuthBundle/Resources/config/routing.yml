@@ -1,0 +1,18 @@
+auth_auth_auth:
+    path:     /auth
+    defaults: { _controller: AuthAuthBundle:Auth:index }
+auth_auth_CreateUser:
+    path:     /auth/createuser
+    defaults: { _controller: AuthAuthBundle:Auth:createuser }
+auth_auth_login:
+    path:     /auth/auth/login
+    defaults: { _controller: AuthAuthBundle:Auth:login}
+auth_auth_loggout:
+    path:     /auth/loggout
+    defaults: { _controller: AuthAuthBundle:Auth:loggout}
+auth_auth_index:
+    path:     /auth/index
+    defaults: { _controller: AuthAuthBundle:Users:index }
+auth_auth_show:
+    path:     /auth/show
+    defaults: { _controller: AuthAuthBundle:Users:authshow }

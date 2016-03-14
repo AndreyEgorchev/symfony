@@ -1,0 +1,52 @@
+{% extends 'base_for_auth.html.twig' %}
+
+{% block body %}
+    <form action="" method="post" class="form-horizontal">
+        <div class="form-group">
+            <label for="first_name" class="col-sm-2 control-label">Ім'я</label>
+            <div class="col-sm-10">
+                <input type="text" name="first_name" class="form-control" id="first_name" placeholder="Ім'я">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="last_name" class="col-sm-2 control-label">Прізвище</label>
+            <div class="col-sm-10">
+                <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Прізвище">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <input type="text" name="email" class="form-control" id="email" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">Пароль</label>
+            <div class="col-sm-10">
+                <input type="password" name="password" class="form-control" id="password" placeholder="Пароль">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password_confirm" class="col-sm-2 control-label">Повтор пароля</label>
+            <div class="col-sm-10">
+                <input type="password" name="password_confirm" class="form-control" id="password_confirm" placeholder="Повтор пароля">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Запам'ятати мене
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" value="Зареєструватись">
+            </div>
+
+        </div>
+    </form>
+
+{% endblock %}

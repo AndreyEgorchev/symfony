@@ -1,0 +1,28 @@
+spare_parts_index:
+    path:     /
+    defaults: { _controller: "ProdAutoProdBundle:Spare_parts:index" }
+    methods:  GET
+
+spare_parts_show:
+    path:     /{id}/show
+    defaults: { _controller: "ProdAutoProdBundle:Spare_parts:prodautoshow" }
+    methods:  GET
+
+spare_parts_new:
+    path:     /new
+    defaults: { _controller: "ProdAutoProdBundle:Spare_parts:prodautonew" }
+    methods:  [GET, POST]
+
+spare_parts_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ProdAutoProdBundle:Spare_parts:prodautoedit" }
+    methods:  [GET, POST]
+
+spare_parts_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ProdAutoProdBundle:Spare_parts:prodautodelete" }
+    methods:  DELETE
+spare_parts_add_post:
+    path:     /{id}
+    defaults: { _controller: "ProdAutoProdBundle:Spare_parts:prodavtoadd_post" }
+    methods:  [GET, POST]

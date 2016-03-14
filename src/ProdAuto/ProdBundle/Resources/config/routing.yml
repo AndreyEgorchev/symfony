@@ -1,0 +1,18 @@
+prod_auto_prod_auto_index:
+    path:     /prodauto/index
+    defaults: { _controller: ProdAutoProdBundle:Spare_parts:index }
+prod_auto_prod_auto_edit:
+    path:     /prodauto/edit/{id}
+    defaults: { _controller: ProdAutoProdBundle:Spare_parts:prodautoedit }
+prod_auto_prod_auto_new:
+    path:     /prodauto/new
+    defaults: { _controller: ProdAutoProdBundle:Spare_parts:prodautonew }
+prod_auto_prod_show:
+    path:     /prodauto/show/{id}
+    defaults: { _controller: ProdAutoProdBundle:Spare_parts:prodautoshow }
+prod_auto_prod_delete:
+    path:     /prodauto/delete/{id}
+    defaults: { _controller: ProdAutoProdBundle:Spare_parts:prodautodelete }
+prod_auto_prod_add_post:
+    path:     /prodauto/add_post{id}
+    defaults: { _controller: ProdAutoProdBundle:Spare_parts:prodavtoadd_post }

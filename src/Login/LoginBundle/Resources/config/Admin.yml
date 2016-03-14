@@ -1,0 +1,31 @@
+services:
+    sonata.admin.user:
+        class: Login\LoginBundle\Admin\User
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "user" }
+        arguments:
+            - ~
+            - Login\LoginBundle\Entity\User
+            - ~
+        calls:
+            - [ setTranslationDomain, [LoginLoginBundle]]
+    sonata.admin.post:
+        class: Login\LoginBundle\Admin\Post
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "post" }
+        arguments:
+            - ~
+            - ProdAuto\ProdBundle\Entity\Post
+            - ~
+        calls:
+            - [ setTranslationDomain, [ProdAutoProdBundle]]
+    sonata.admin.spare_parts:
+        class: Login\LoginBundle\Admin\Spare_parts
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Spare_parts" }
+        arguments:
+            - ~
+            - ProdAuto\ProdBundle\Entity\Spare_parts
+            - ~
+        calls:
+            - [ setTranslationDomain, [ProdAutoProdBundle]]

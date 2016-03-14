@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Spare_parts</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ spare_part.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ spare_part.title }}</td>
+            </tr>
+            <tr>
+                <th>Serial_number</th>
+                <td>{{ spare_part.serialnumber }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ spare_part.description }}</td>
+            </tr>
+            <tr>
+                <th>Producer</th>
+                <td>{{ spare_part.producer }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ spare_part.price }}</td>
+            </tr>
+            <tr>
+                <th>Created</th>
+                <td>{% if spare_part.created %}{{ spare_part.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('spare_parts_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('spare_parts_edit', { 'id': spare_part.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
